@@ -1,3 +1,6 @@
+### The following is a programing assignment for my intoduction to computer vision class at SFU where we got to test different filters on high and low frequency images. See the full results at: https://htmlpreview.github.io/?https://github.com/007-T/Image-filtering/blob/main/hw1template.html
+
+Here is the assignment description for reference.
 # CMPT 361 - Introduction to Computer Graphics (and Vision)
 
 Programming Assignment 1
@@ -31,3 +34,5 @@ As we saw in lecture, canny edge detection has a low and a high threshold for de
 Apply Canny edge detection and get the default parameters computed by Matlab (or the library you’re using for other languages). You will calibrate these two parameters until you are satisfied with the result. One hint: You can sweep these parameters and save every result as png files with thresholds noted in the name of the file. Then you can use your favourite image viewer to select the best ones.
 Compute 5 edge representations for HP. One with optimal thresholds, one with a lower low threshold, one with a higher low threshold, one with a lower high threshold, and one with a higher high threshold. Save them as HP-canny-optimal.png, HP-canny-lowlow.png, HP-canny-highlow.png, HP-canny-lowhigh.png, and HP-canny-highhigh.png. Comment on why you chose the optimal parameters by comparing it the optimal edges to other versions (here that edge appears, here this esge disappears etc.). If your optimal edges are still not perfect, comment on which edges should have been included / excluded by a better edge detection method.
 Repeat the same thing for LP. Save all 5 versions as LP-canny-/fillintheblanks/.png
+
+** Source: http://yaksoy.github.io/introvc/assignment1/
