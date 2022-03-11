@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<title>CMPT 361 HW1 - Ali Tohidi</title>
+
+</head> <body>
+
+<h2>CMPT 361 - Homework 1</h2>
+
+<p>Name: <b>Ali Tohidi</b></p>
+<p>Student No: <b>301355519</b></p>
+<p>Date: Feb 1st, 2022</p>
+
+<h4>Honor statement:</h4>
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Piazza, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+
+<h4>1: Take two photographs</h4>
+<img src="HP.png" alt="HP" width="300" height="300">
+<img src="LP.png" alt="LP" width="300" height="300">
+
+
+<h4>2: Compute frequency representations</h4>
+<img src="HP-freq.png" alt="HP-freq" width="300" height="300">
+<img src="LP-freq.png" alt="LP-freq" width="300" height="300">
+
+<h4>3: Visualize kernels</h4>
+<img src="gaus-surf.png" alt="gaus-surf" width="300" height="300">
+<img src="dog-surf.png" alt="dog-surf" width="300" height="300">
+<br><br>
+<img src="HP-filt.png" alt="HP-filt" width="300" height="300">
+<img src="HP-filt-freq.png" alt="HP-filt-freq" width="300" height="300">
+<br><br>
+<img src="LP-filt.png" alt="LP-filt" width="300" height="300">
+<img src="LP-filt-freq.png" alt="LP-filt-freq" width="300" height="300">
+<br><br>
+<img src="HP-dogfilt.png" alt="HP-dogfilt" width="300" height="300">
+<img src="HP-dogfilt-freq.png" alt="HP-dogfilt-freq" width="300" height="300">
+<br><br>
+<img src="LP-dogfilt.png" alt="LP-dogfilt" width="300" height="300">
+<img src="LP-dogfilt-freq.png" alt="LP-dogfilt-freq" width="300" height="300">
+
+<h4>4: Anti-aliasing</h4>
+<img src="HP-sub2.png" alt="HP-sub2" width="300" height="300">
+<img src="HP-sub2-freq.png" alt="HP-sub2-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub2.png" alt="LP-sub2" width="300" height="300">
+<img src="LP-sub2-freq.png" alt="LP-sub2-freq" width="300" height="300">
+<p> In the spatial domain we can see aliasing happen in the form of wave like 
+    patterns on both leaves in the high frequency picture. You can see them in the middle 
+    right side of the picture and around the center of both leaves.
+    In the frequency domain if we compare it to the frequency representation 
+    of the original photo we can see that the center of the image is darker 
+    and now there are more high frequency components toward the edges of the 
+    frequency representation.
+    Another thing to note is that I tried ailising with many high frequency photos and most 
+    of them didn't show affects of aliasing in the half the size subsampling.
+    As for the lower frequency picture we can see that the picture looks completely fine even 
+    though it has a lower quality now. in the frequency domain of it we can see that more high 
+    frequency components are visible than the original one but no aliasing is visible.
+</p>
+
+<img src="HP-sub4.png" alt="HP-sub4" width="300" height="300">
+<img src="HP-sub4-freq.png" alt="HP-sub4-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub4.png" alt="LP-sub4" width="300" height="300">
+<img src="LP-sub4-freq.png" alt="LP-sub4-freq" width="300" height="300">
+<p> Here in the quarter the size subsample we can clearly see the effects of 
+    aliasing in the high frequency image. In the spatial domain there are 
+    spiral and wave like patterns all around the picture on the leaves. And 
+    in the frequency domain we can see that it looks completely different and 
+    very noisy. It has bright points all arounf in no apparent order.
+    As for the lower frequency image similar to last part even though it has 
+    a lower quality now, it still has no aliasing effects. And in the frequency
+    domain of it it also has more bright points all around the representation.
+</p>
+
+<img src="HP-sub2-aa.png" alt="HP-sub2-aa" width="300" height="300">
+<img src="HP-sub2-aa-freq.png" alt="HP-sub2-aa-freq" width="300" height="300">
+<br><br>
+<img src="HP-sub4-aa.png" alt="HP-sub4-aa" width="300" height="300">
+<img src="HP-sub4-aa-freq.png" alt="HP-sub4-aa-freq" width="300" height="300">
+<p> If we look at the half version image with ani-aliasing we can see no aliasing 
+    effects and even tho the image is less sharp than the original it is not blurry. 
+    For ani-aliasing the half version I used Gaussian kernel with <b>size: 3</b> and 
+    <b>standrard deviation: 1</b> as it was sufficient to remove aliasing without 
+    making the image too blurry. Also looking at the frequency domain representation
+    we can see that the top right and bottom letf of it are less bright but the Gaussian 
+    kernel used was not large enough to see the effects of it clearly in the frequency 
+    representaion as we did in part 3.
+    If we look at the quarter version image the anti-alia has removed all the aliasing
+    but it has also made the image quite blurry. for the quarter version I used Gaussian 
+    kernel with <b>size: 13</b> and <b>standrard deviation: 3.75</b>. I used these values 
+    because even setting the standard deciation to 3.5 or any smaller size still showed 
+    aliasing on the top right corner of the picture.
+</p>
+
+<h4>5: Canny edge detection thresholding</h4>
+
+<img src="HP-canny-optimal.png" alt="HP-canny-optimal" width="500" height="500">
+<br><br>
+<img src=" HP-canny-lowlow.png" alt=" HP-canny-lowlow" width="300" height="300">
+<img src=" HP-canny-highlow.png" alt=" HP-canny-highlow" width="300" height="300">
+<br><br>
+<img src=" HP-canny-lowhigh.png" alt=" HP-canny-lowhigh" width="300" height="300">
+<img src=" HP-canny-highhigh.png" alt=" HP-canny-highhigh" width="300" height="300">
+<p>I chose <b>low threshhold of 0.05</b> and <b>high threshhold of 0.13</b> as my optimal threshhold.
+    The high frequency image has many edges and in the low-low representation the picture is all edges, 
+    it has no depth in the picture and the outer edges are blended in with the inner edges. The high-low 
+    representation is very close to my optimal but I still preferred to ahow more of the inner edges 
+    (look at the top left leaf it has more inner edges in the optimal one). The low-high and high-high 
+    representations are missing many edges.
+    This is still not perfect because when you try to lower the threshhold to view darker edges (towards
+    the center of the leaves then it will also pick up things that are not edges or of less importance).
+</p>
+
+<img src="LP-canny-optimal.png" alt="LP-canny-optimal" width="500" height="500">
+<br><br>
+<img src=" LP-canny-lowlow.png" alt=" LP-canny-lowlow" width="300" height="300">
+<img src=" LP-canny-highlow.png" alt=" LP-canny-highlow" width="300" height="300">
+<br><br>
+<img src=" LP-canny-lowhigh.png" alt=" LP-canny-lowhigh" width="300" height="300">
+<img src=" LP-canny-highhigh.png" alt=" LP-canny-highhigh" width="300" height="300">
+<p>The lower frequency image has a lot of different shapes which made choosing an optimal pair of threshholds
+    quite interesting. I chose <b>low threshhold of 0.02</b> and <b>high threshhold of 0.17</b> as my optimal threshhold.
+    The low-low representaion has picked up many things that are not edges. The high-low representation is very 
+    close to my optimal but has more details from the back grounds which was not desirable. The low high has missed 
+    many edges that I cared about like the left sholder and nose. and the high-high has too little edges.
+    This is very close to perfect for me but I would have still liked to see smother edges on the left sholder and less 
+    edges picked up from the background.
+</p>
+
+
+</body> </html>
