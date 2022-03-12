@@ -9,7 +9,7 @@ In this assignment, you will filter images and analyze them both in the spatial 
 You can do this assignment in any language. However, as we cover all these topics with Matlab demonstrations in lectures, it will be easier in Matlab. If you use another language, you need to submit your code with a readme file with detailed explanations on how to run your code (the libraries you used etc.).
 You need to submit your source code and your report through Coursys. Once run, your code should save each result image with the filenames defined below with a single click. Your report will be an html file together with your result images. The provided template uses these filenames to display your results.
 When saving your resulting images (filtered image, frequency magnitude image, edge image etc.), you should use the imwrite function to save them as png. When saving visualizations (when we use surf, for example) save them using the saveas(gcf, ‘filename’) function in Matlab to save them again as png.
-##1: Take two photographs
+## 1: Take two photographs
 
 You will use two images in your analysis, and the first part is finding these images! You can take your own photographs (encouraged) or find images from the internet. One photograph should have a lot of high-frequency components (many edges all around) and the other should have mostly low-frequency components. You have seen such a pair in the Signals & Images and Sampling & Aliasing lectures.
 Resize and crop your photographs and convert to grayscale to get a pair of 500x500 grayscale images. We will refer to these 500x500 images as HP (high-pass) and LP (low-pass) in the rest of this assignment.
